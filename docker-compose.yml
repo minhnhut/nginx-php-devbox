@@ -18,5 +18,10 @@ services:
     image: mysql:5.6
     environment:
       MYSQL_ROOT_PASSWORD: 123456
+      MYSQL_DATABASE: web_db
+    ports:
+      - mode: host
+        target: 3306
+        published: 3306
   cache:
     image: redis:latest
